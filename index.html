@@ -20,20 +20,26 @@
 <body>
 
   <div class="container">
-      <div class="row">
-          <div class="col-md-12 text-center height-auto" id="icon"></div>
-          <div class="col-md-12 text-center" id="temperature"><p>...getting curent weather...</p></div>
-          <div class="col-md-12 text-center height-auto rounded mx-auto d-block" id="icon">
-            <img id="fahrenheitButton" src="images/Degrees-Fahrenheit.svg" alt="">
-            <img id="celciusButton" src="images/Degrees-Celcius.svg" alt=""></div>
+    <div class="row">
+      <div class="col-md-12 text-center height-auto" id="icon"></div>
+      <div class="col-md-12 text-center" id="temperature">
+        <p>
+          <div class="alert alert-info" role="alert">
+            <strong>Hey!</strong> Allow location <br>access and be patient.
+          </div>
+        </p>
       </div>
-      <div class="row">
-          <div class="col-md-12 text-center" id="summary"></div>
-          <!-- <div class="col-md-12 text-center" id="geoLocation"></div> -->
-          <div class="col-md-12 text-center"><br><h6>Made by Eric Peter Gieg</h6></div>
-          <div class="col-md-12 text-center"><h6><a href="https://darksky.net/poweredby/">Powered by Dark Sky</a></h6></div>
-      </div>
-  </div>
+      <div class="col-md-12 text-center height-auto rounded mx-auto d-block" id="tempIcon">
 </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center" id="summary"></div>
+      <div class="col-md-12 text-center"><br>
+        <p>By Eric Peter Gieg</p></div>
+      <div class="col-md-12 text-center">
+        <p><a href="https://darksky.net/poweredby/">Powered by Dark Sky</a></p></div>
+    </div>
+  </div>
+  </div>
 </body>
 </html>
