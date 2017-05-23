@@ -11,7 +11,7 @@ $(document).ready(function() {
       $.getJSON("https://crossorigin.me/https://api.darksky.net/forecast/ebcbd99d8eb007ce61196e23b91769a4/" + latitude + "," + longitude, function(response) {
         var iconRequest = response.currently.icon;
         var temperatureCurrently = Math.round(response.currently.temperature);
-        $("#temperature").html('<h1>' + temperatureCurrently + '</h1>');
+        $("#temperature").html('<h1>' + temperatureCurrently + '°</h1>');
         $("#summary").html('<h2>' + response.currently.summary + '</h2>');
         if (iconRequest.includes("partly-cloudy-night")) {
           ($("#icon").html('<img src="images/Cloud-Moon.svg" alt="">'));
@@ -36,11 +36,11 @@ $(document).ready(function() {
 
 
         $("#celciusButton").click(function() {
-          $("#temperature").html('<h1>' + Math.round((temperatureCurrently - 32) * 0.5556) +'</h1>');
+          $("#temperature").html('<h1>' + Math.round((temperatureCurrently - 32) * 0.5556) +'°</h1>');
         });
 
         $("#fahrenheitButton").click(function() {
-          $("#temperature").html('<h1>' + Math.round(temperatureCurrently) + '</h1>');
+          $("#temperature").html('<h1>' + Math.round(temperatureCurrently) + '°</h1>');
         });
 
       });
