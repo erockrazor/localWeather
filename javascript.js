@@ -8,7 +8,7 @@ $(document).ready(function() {
       $("#geoLocation").html("Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude);
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;
-      $.getJSON("https://crossorigin.me/https://api.darksky.net/forecast/ebcbd99d8eb007ce61196e23b91769a4/" + latitude + "," + longitude, function(response) {
+      $.getJSON("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/ebcbd99d8eb007ce61196e23b91769a4/" + latitude + "," + longitude, function(response) {
         var iconRequest = response.currently.icon;
         var temperatureCurrently = Math.round(response.currently.temperature);
         $("#temperature").html('<h1>' + temperatureCurrently + '°</h1>');
